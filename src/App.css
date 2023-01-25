@@ -1,6 +1,6 @@
 
 html {
-  background: url(../public/pokemonImage.jpg) no-repeat center center fixed;
+  background: url(../pokemonImage.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,4 +19,32 @@ html {
   width: max-content;
   background-color: rgba(26, 25, 25, 0.199);
   border-radius: 40px;
+}
+
+.playerboard--container{
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.grid--{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.pokemon--container{
+  background-color: black;
+  border-radius: 30px;
+  width: 250px;
+  height: 300px;
+  padding: 20px;
+  color: white;
+  margin: 5px;
+}
+
+.pokemon--container > img {
+  width: 100%;
 }
