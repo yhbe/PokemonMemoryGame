@@ -1,9 +1,16 @@
 # Pokemon Memory Game
 
-Test your memory by not pressing the same card twice
+Test your memory by not clicking the same card twice
+
+Created with React, Javascript
 
 ## Goals
-Use React Hooks and lifecycle methods.
+React with API call. Handle SideEffects with hooks.
+
+## Results
+
+![image1](https://user-images.githubusercontent.com/101876022/214943681-087f7bad-93cb-4d83-bb4a-01c2b377820f.png)
+![image2](https://user-images.githubusercontent.com/101876022/214943734-9e75a956-d29e-4f7f-8638-e91ebdd9255f.png)
 
 #### Credit
   API used - https://pokeapi.co/
