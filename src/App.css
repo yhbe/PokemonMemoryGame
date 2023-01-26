@@ -11,6 +11,7 @@ html {
 *{
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header--container{
@@ -45,6 +46,7 @@ html {
   margin: 5px;
   cursor: pointer;
   box-shadow: 1px 1px 30px black;
+  font-size: .7rem;
 }
 
 .pokemon--container:hover{
