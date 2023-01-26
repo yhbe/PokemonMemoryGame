@@ -71,10 +71,6 @@ export default function Playerboard(props) {
         ) 
       ) {
         props.setGameLost(true)
-        if (props.currentScore > JSON.parse(localStorage.getItem("best")) && props.bestScore){
-          localStorage.setItem("best", JSON.stringify(props.currentScore) )
-          props.setBestScore(props.currentScore)
-        }
       } else {
         setSelectedPokemonArr(prevState => {
           return [
