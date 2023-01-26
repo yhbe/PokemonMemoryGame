@@ -1,6 +1,5 @@
 import React from "react";
 export default function Playerboard(props) {
-  let newGame = true
   const [pokemon, setPokemon] = React.useState([]);
   const [pokemonList, setPokemonList] = React.useState([])
   const [selectedPokemonArr, setSelectedPokemonArr] = React.useState([])
@@ -22,11 +21,19 @@ export default function Playerboard(props) {
           })
       })
     }, []);
-    
+
+    React.useEffect(() => {
+      if (!props.gameLost){
+        setPokemonList([])
+        setSelectedPokemonArr([])
+        getRandomPokemon()
+      }
+    }, [props.gameLost])
+
+    let randomPokemonArray = getRandomPokemon()
     function getRandomPokemon(){
-      if (pokemonList.length > 0) return
-      if (!pokemon[0]) return "Not ready"
-      if (!newGame) return
+      if (!pokemon[0]) return 
+      if (pokemonList.length > 0) return 
       let arr = []
       for (let i = 0; i < props.gameLevel; i++){
         let randomNumber = Math.trunc(Math.random() * 151)
@@ -42,7 +49,6 @@ export default function Playerboard(props) {
       setPokemonList(arr)
     }
 
-    let randomPokemonArray= getRandomPokemon()
 
     if (pokemon[0]) {
       randomPokemonArray = pokemonList.map(pokemon => {
@@ -65,7 +71,9 @@ export default function Playerboard(props) {
         ) 
       ) {
         props.setGameLost(true)
-        props.setBestScore(props.currentScore)
+        if (props.currentScore > props.bestScore){
+          props.setBestScore(props.currentScore)
+        }
       } else {
         setSelectedPokemonArr(prevState => {
           return [

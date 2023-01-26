@@ -20,6 +20,7 @@ function App() {
         bestScore={bestScore}
       />
       <Playerboard
+        gameLost={gameLost}
         setGameLost={setGameLost}
         gameLevel={gameLevel}
         setGameLevel ={setGameLevel}
@@ -28,7 +29,7 @@ function App() {
         setBestScore={setBestScore}
         bestScore={bestScore}
       />
-      {gameLost && <LossScreen />}
+      {gameLost && <LossScreen bestScore={bestScore} setCurrentScore={setCurrentScore} setGameLevel={setGameLevel} setGameLost={setGameLost} currentScore={currentScore} />}
     </>
   );
 }
