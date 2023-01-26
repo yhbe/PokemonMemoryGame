@@ -39,7 +39,7 @@ function App() {
         />
       )}
       <div className="credits">
-        <a href="https://unsplash.com/s/photos/pokemon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+        <a href="https://unsplash.com/@introspectivedsgn">
           Photo by Erik Mclean - Unsplash
         </a>
         <a
