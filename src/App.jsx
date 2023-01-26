@@ -23,13 +23,32 @@ function App() {
         gameLost={gameLost}
         setGameLost={setGameLost}
         gameLevel={gameLevel}
-        setGameLevel ={setGameLevel}
+        setGameLevel={setGameLevel}
         setCurrentScore={setCurrentScore}
         currentScore={currentScore}
         setBestScore={setBestScore}
         bestScore={bestScore}
       />
-      {gameLost && <LossScreen bestScore={bestScore} setCurrentScore={setCurrentScore} setGameLevel={setGameLevel} setGameLost={setGameLost} currentScore={currentScore} />}
+      {gameLost && (
+        <LossScreen
+          bestScore={bestScore}
+          setCurrentScore={setCurrentScore}
+          setGameLevel={setGameLevel}
+          setGameLost={setGameLost}
+          currentScore={currentScore}
+        />
+      )}
+      <div className="credits">
+        <a href="https://unsplash.com/s/photos/pokemon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+          Photo by Erik Mclean - Unsplash
+        </a>
+        <a
+          href="https://www.flaticon.com/free-icons/card-game"
+          title="Card game icons"
+        >
+          Favicon created by mangsaabguru - Flaticon
+        </a>
+      </div>
     </>
   );
 }

@@ -13,10 +13,6 @@ html {
   box-sizing: border-box;
 }
 
-body{
-  position: relative;
-}
-
 .header--container{
   padding: 20px;
   color: white;
@@ -95,4 +91,19 @@ body{
 .loss-screen-play--again:hover {
   cursor: pointer;
   color: rgb(240, 60, 60);
+}
+
+.credits{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: rgb(164, 164, 165);
+  text-decoration: none;
+  bottom: 0;
+  left: 0;
+}
+
+a{
+  color: rgb(86, 86, 88);
+  text-decoration: none;
 }
